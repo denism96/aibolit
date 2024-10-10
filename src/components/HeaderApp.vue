@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header container">
     <img src="/src/assets/image/logo.svg" alt="logo" />
     <nav>
       <ul class="header-list">
@@ -13,4 +13,19 @@
     <span>Волгоград</span>
   </header>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1760px;
+  margin-top: 30px;
+}
+.header-list {
+  display: flex;
+
+  li {
+    margin-right: 3em;
+  }
+}
+</style>
