@@ -38,6 +38,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-right: 120px;
 
   h1 {
     font-size: 80px;
