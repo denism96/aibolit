@@ -2,7 +2,8 @@
     <section>
         <div class="content">
             <h2>Удобное приложение для питомцев и их хозяев</h2>
-            <img src="/src/assets/" alt="">
+            <img src="/src/assets/image/mobile/dog.png" alt="">
+            <img class="phone" src="/src/assets/image/mobile/phone.png" alt="">
         </div>
     </section>
 </template>
@@ -16,6 +17,7 @@
     }
 
     .content {
+        position: relative;
         max-width: 1350px;
         width: 100%;
         margin: 0 auto;
@@ -26,6 +28,16 @@
             font-size:80px;
             color: $white-color;
             width: 826px;
+        }
+
+        .phone {
+        right: -8%;
+        bottom: -42%;
+    }
+        img {
+            position: absolute;
+            bottom: -46%;
+            right: 11%;
         }
     }
 
