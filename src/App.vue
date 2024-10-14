@@ -6,6 +6,7 @@
   <SectionCount></SectionCount>
   <SectionMobile></SectionMobile>
   <SectionContacts></SectionContacts>
+  <FooterApp></FooterApp>
 </template>
 <script setup>
 import CatalogApp from "./components/CatalogApp.vue";
@@ -15,4 +16,5 @@ import SectionHistory from "./components/SectionHistory.vue";
 import SectionCount from "./components/SectionCount.vue";
 import SectionMobile from "./components/SectionMobile.vue";
 import SectionContacts from "./components/SectionContacts.vue";
+import FooterApp from "./components/FooterApp.vue";
 </script>
