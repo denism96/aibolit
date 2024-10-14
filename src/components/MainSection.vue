@@ -1,22 +1,13 @@
+<script setup lang="ts">
+import SocialLink from "./social/SocialLink.vue";
+</script>
+
 <template>
   <section>
-    <!-- <ul class="section-list">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-    </ul> -->
     <div class="center-content">
       <h1>Айболит круглосуточная ветклиника</h1>
       <button>Записаться</button>
-      <div class="social">
-        <img src="/src/assets/image/inst.svg" alt="inst" />
-        <img src="/src/assets/image/fb.svg" alt="fb" />
-        <img src="/src/assets/image/vk.svg" alt="vk" />
-        <img src="/src/assets/image/youtube.svg" alt="youtube" />
-      </div>
+      <SocialLink></SocialLink>
     </div>
     <div class="right-content">
       <img class="cat-image" src="/src/assets/image/cat.png" alt="cat" />
@@ -74,14 +65,6 @@ section {
     position: absolute;
     bottom: 50px;
     right: 40px;
-  }
-}
-.social {
-  display: flex;
-  margin-top: auto;
-  margin-bottom: 50px;
-  img {
-    margin-right: 40px;
   }
 }
 </style>

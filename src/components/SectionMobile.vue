@@ -1,19 +1,14 @@
+<script setup lang="ts">
+import MobileApps from "./download/MobileApps.vue";
+</script>
+
 <template>
   <section>
     <div class="content">
       <h2>Удобное приложение для питомцев и их хозяев</h2>
       <img src="/src/assets/image/mobile/dog.png" alt="" />
       <img class="phone" src="/src/assets/image/mobile/phone.png" alt="" />
-      <img
-        class="appstore"
-        src="/src/assets/image/mobile/appstore.png"
-        alt=""
-      />
-      <img
-        class="googleplay"
-        src="/src/assets/image/mobile/googleplay.png"
-        alt=""
-      />
+      <MobileApps></MobileApps>
     </div>
   </section>
 </template>
@@ -42,22 +37,12 @@ section {
 
   .phone {
     right: -8%;
-    bottom: -42%;
-  }
-
-  .appstore {
-    left: 0;
-    bottom: 12px;
-  }
-
-  .googleplay {
-    left: 170px;
-    bottom: 0px;
+    bottom: -4%;
   }
 
   img {
     position: absolute;
-    bottom: -46%;
+    bottom: -7%;
     right: 11%;
   }
 
