@@ -28,16 +28,19 @@ const clickOnTab = (tabName) => {
   <div class="tab-content"><slot /></div>
 </template>
 <style lang="scss" scoped>
+.tab-nav {
+  display: flex;
+  flex-direction: column;
+}
 span {
   margin-right: 30px;
   margin-bottom: 20px;
-  display: block;
-  width: 100px;
-  height: 30px;
-  background-color: red;
+  padding: 3px 10px;
   cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
 }
 .selected {
-  background-color: blue;
+  border: 2px solid #000;
 }
 </style>
