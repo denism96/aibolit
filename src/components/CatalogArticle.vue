@@ -11,7 +11,7 @@ defineProps({
 <article v-for="card in cards" :key="card.id">
     <h3>{{ card.name }}</h3>
     <small>26 услуг</small>
-    <img :src=" card.image" alt="Картинка направления">
+    <img :src="card.image" alt="Картинка направления">
 </article>
 </template>
 <style lang="scss" scoped>

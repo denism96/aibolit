@@ -79,5 +79,4 @@ export const cardsCatalog = [
         name: 'Груминг',
         image: '/src/assets/image/catalog/grooming.svg'
     },
-
 ]

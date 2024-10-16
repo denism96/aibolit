@@ -16,7 +16,9 @@
           <span class="descr">Круглосуточно</span>
         </div>
       </div>
-      <div class="rigth-content-map"></div>
+      <div class="rigth-content-map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aef1ac74e2c62e7109c66496e7cdcad73ef885f61e6a85a0ca3ad152c603f414c&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      </div>
     </div>
   </section>
 </template>
