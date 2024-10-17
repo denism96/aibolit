@@ -12,75 +12,75 @@ const changeTab = (tabName) => {
 </script>
 
 <template>
-  <section>
+  <section class="container first-section">
     <AppTabs :names="tabs" :selectedTab="selectedTab" @changeTab="changeTab">
     </AppTabs>
     <div class="center-content">
       <div v-for="tab in tabs" :key="tab.name">
         <h1 v-if="selectedTab === tab.name">{{ tab.label }}</h1>
-
       </div>
       <button>Записаться</button>
       <SocialLink></SocialLink>
     </div>
-    <div class="right-content"> 
-      <div v-for="tab in tabs" :key="tab.name">
-        <img v-if="selectedTab === tab.name" :src="tab.image" :alt="tab.imageAlt">
+    <div class="right-content">
+      <div class="img-content" v-for="tab in tabs" :key="tab.name">
+        <img
+          v-if="selectedTab === tab.name"
+          :src="tab.image"
+          :alt="tab.imageAlt"
+        />
       </div>
-      <p>8 121 909 00 00</p>
+      <span>8 (121) 909 00 00</span>
     </div>
   </section>
 </template>
 <style lang="scss" scoped>
 @import "/src/assets/styles/main.scss";
-section {
+
+.first-section {
+  position: relative;
+  max-width: 1760px;
   display: flex;
-  width: 100%;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 80px;
-  height: 786px;
 }
 
 .center-content {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-right: 120px;
+  max-width: 610px;
+}
 
-  h1 {
-    font-size: 80px;
-    max-width: 645px;
-    line-height: 80px;
-  }
-  button {
-    background-color: $orange-color;
-    padding: 10px 40px;
-    border-radius: 30px;
-    color: $white-color;
-    margin-top: 30px;
-    max-width: 284px;
-  }
+h1 {
+  font-size: 80px;
+  line-height: 80px;
+  margin-bottom: 60px;
+}
+button {
+  background-color: $orange-color;
+  padding: 10px 40px;
+  border-radius: 30px;
+  color: $white-color;
+  margin-top: 30px;
+  max-width: 284px;
+  height: 67px;
+  font-size: 30px;
+  font-style: italic;
+  box-shadow: 0px 0px 4px 4px $orange-color;
 }
 .right-content {
   position: relative;
-  width: 833px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 926px;
 
-  .dog-image {
+  span {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-  .cat-image {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-  }
-  p {
-    position: absolute;
+    right: 50px;
     bottom: 50px;
-    right: 40px;
+    font-size: 24px;
+    font-style: italic;
   }
 }
 </style>

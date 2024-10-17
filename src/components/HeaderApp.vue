@@ -20,12 +20,14 @@
   justify-content: space-between;
   max-width: 1760px;
   margin-top: 30px;
+
+  nav {
+    max-width: 1300px;
+    width: 100%;
+  }
 }
 .header-list {
   display: flex;
-
-  li {
-    margin-right: 3em;
-  }
+  justify-content: space-between;
 }
 </style>
