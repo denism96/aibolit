@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import SocialLink from "./social/SocialLink.vue";
-import AppTabs from "./AppTabs.vue";
+import SocialLink from "../social/SocialLink.vue";
+import AppTabs from "../AppTabs.vue";
 import { ref } from "vue";
-import { tabs } from "../storage/tabs";
+import { tabs } from "../../storage/tabs";
 
 const selectedTab = ref(tabs[0].name);
 

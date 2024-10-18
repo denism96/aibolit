@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MobileApps from "./download/MobileApps.vue";
+import MobileApps from "../download/MobileApps.vue";
 </script>
 
 <template>

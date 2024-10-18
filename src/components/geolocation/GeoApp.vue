@@ -1,10 +1,4 @@
-<script setup>
-navigator.geolocation.getCurrentPosition( (position) => {
-    do_something(position.coords.latitude, position.coords.longitude)
-})
-</script>
+<script setup></script>
 <template>
-    <div class="geoloc">
-        
-    </div>
+  <div class="geoloc"></div>
 </template>

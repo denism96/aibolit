@@ -1,6 +1,6 @@
 <script setup>
-import { cardsCatalog } from "../storage/cardsCatalog";
-import CatalogArticle from "./CatalogArticle.vue";
+import { cardsCatalog } from "../../storage/cardsCatalog";
+import CatalogArticle from "../CatalogArticle.vue";
 </script>
 <template>
   <section class="catalog">

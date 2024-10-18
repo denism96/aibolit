@@ -1,13 +1,25 @@
 <template>
   <header class="header container">
-    <img src="/src/assets/image/logo.svg" alt="logo" />
+    <router-link to="/"
+      ><img src="/src/assets/image/logo.svg" alt="logo"
+    /></router-link>
     <nav>
       <ul class="header-list">
-        <li class="header-list-item">ЛИЧНЫЙ КАБИНЕТ</li>
-        <li class="header-list-item">О НАС</li>
-        <li class="header-list-item">НОВОСТИ И АКЦИИ</li>
-        <li class="header-list-item">КОНТАКТЫ</li>
-        <li class="header-list-item">БЛОГ</li>
+        <li class="header-list-item">
+          <router-link to="/profile">ЛИЧНЫЙ КАБИНЕТ</router-link>
+        </li>
+        <li class="header-list-item">
+          <router-link to="/about">О НАС</router-link>
+        </li>
+        <li class="header-list-item">
+          <router-link to="/news">НОВОСТИ И АКЦИИ</router-link>
+        </li>
+        <li class="header-list-item">
+          <router-link to="/contacts">КОНТАКТЫ</router-link>
+        </li>
+        <li class="header-list-item">
+          <router-link to="/blog">БЛОГ</router-link>
+        </li>
       </ul>
     </nav>
     <span>Волгоград</span>
