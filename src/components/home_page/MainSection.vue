@@ -19,7 +19,7 @@ const changeTab = (tabName) => {
       <div v-for="tab in tabs" :key="tab.name">
         <h1 v-if="selectedTab === tab.name">{{ tab.label }}</h1>
       </div>
-      <button>Записаться</button>
+      <button><router-link to="/record">Записаться</router-link></button>
       <SocialLink></SocialLink>
     </div>
     <div class="right-content">
