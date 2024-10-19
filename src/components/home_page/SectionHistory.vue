@@ -7,7 +7,9 @@
         ООО «Чижи». Идея пришла, т.к. у основателя компании Прозор Жанны
         Георгиевны была собака боксёр по кличке Бард…
       </p>
-      <span class="read-more">Читать далее</span>
+      <span class="read-more"
+        ><router-link to="/history">Читать далее</router-link></span
+      >
     </div>
     <div class="bot-content">
       <h2>Наши специалисты</h2>

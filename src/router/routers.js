@@ -6,6 +6,7 @@ import NewsView from "../views/NewsView.vue";
 import ContactsView from "../views/ContactsView.vue";
 import BlogView from "../views/BlogView.vue";
 import RecordReception from "../components/make_an_appointment/RecordReception.vue";
+import HistoryView from "../views/HistoryView.vue";
 
 export const router = createRouter({
   routes: [
@@ -43,6 +44,11 @@ export const router = createRouter({
       name: "record",
       path: "/record",
       component: RecordReception,
+    },
+    {
+      name: "history",
+      path: "/history",
+      component: HistoryView,
     },
   ],
   history: createWebHistory(),
