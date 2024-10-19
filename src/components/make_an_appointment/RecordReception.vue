@@ -12,6 +12,7 @@
         <span>Прием в клинике</span>
         <span>Бесплатно</span>
       </div>
+      <span class="exit"><router-link to="/">НАЗАД</router-link> </span>
     </div>
   </div>
 </template>
@@ -32,6 +33,7 @@
   }
 }
 .right-side {
+  position: relative;
   max-width: 909px;
   width: 100%;
 
@@ -50,6 +52,26 @@
       font-size: 20px;
       font-style: italic;
     }
+  }
+}
+.exit {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  color: $orange-color;
+  padding-left: 9px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    border-bottom: 1px solid $orange-color;
+    border-left: 1px solid $orange-color;
+    top: 40%;
+    left: 0;
   }
 }
 </style>
