@@ -9,7 +9,7 @@
           <router-link to="/profile">ЛИЧНЫЙ КАБИНЕТ</router-link>
         </li>
         <li class="header-list-item about">
-          <router-link to="/about">О НАС</router-link>
+          <router-link to="/about" class="hover">О НАС</router-link>
           <div class="about-nav">
             <ul>
               <li><router-link to="/">Услуги и цены</router-link></li>
@@ -53,8 +53,15 @@
 .about {
   position: relative;
 }
-.about:hover > .about-nav {
-  display: block;
+
+.about:hover {
+  .hover {
+    font-weight: bold;
+  }
+
+  .about-nav {
+    display: block;
+  }
 }
 
 .about-nav {
@@ -62,7 +69,7 @@
   top: 20px;
   left: -60px;
   display: none;
-  width: 250px;
+  width: 300px;
   height: 230px;
   box-shadow: 0px 0px 4px 0px $brown-lite-color;
   border-radius: 20px;
@@ -74,6 +81,11 @@
     font-size: 20px;
     font-style: italic;
     margin-bottom: 30px;
+
+    &:hover {
+      padding-left: 10px;
+      font-weight: bold;
+    }
   }
 }
 </style>
