@@ -9,11 +9,11 @@
           <router-link to="/profile">ЛИЧНЫЙ КАБИНЕТ</router-link>
         </li>
         <li class="header-list-item about">
-          <router-link to="/about" class="hover">О НАС</router-link>
+          <router-link to="/team" class="hover">О НАС</router-link>
           <div class="about-nav">
             <ul>
               <li><router-link to="/">Услуги и цены</router-link></li>
-              <li><router-link to="/">Коллектив</router-link></li>
+              <li><router-link to="/team">Коллектив</router-link></li>
               <li><router-link to="/history">История компании</router-link></li>
             </ul>
           </div>

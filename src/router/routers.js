@@ -7,6 +7,7 @@ import ContactsView from "../views/ContactsView.vue";
 import BlogView from "../views/BlogView.vue";
 import RecordReception from "../components/make_an_appointment/RecordReception.vue";
 import HistoryView from "../views/HistoryView.vue";
+import TeamView from "../views/TeamView.vue";
 
 export const router = createRouter({
   routes: [
@@ -49,6 +50,11 @@ export const router = createRouter({
       name: "history",
       path: "/history",
       component: HistoryView,
+    },
+    {
+      name: "team",
+      path: "/team",
+      component: TeamView,
     },
   ],
   history: createWebHistory(),
