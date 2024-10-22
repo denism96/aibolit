@@ -8,6 +8,7 @@ import BlogView from "../views/BlogView.vue";
 import RecordReception from "../components/make_an_appointment/RecordReception.vue";
 import HistoryView from "../views/HistoryView.vue";
 import TeamView from "../views/TeamView.vue";
+import CatalogView from "../views/catalog/CatalogView.vue";
 
 export const router = createRouter({
   routes: [
@@ -55,6 +56,11 @@ export const router = createRouter({
       name: "team",
       path: "/team",
       component: TeamView,
+    },
+    {
+      name: "catalog",
+      path: "/catalog/:id",
+      component: CatalogView,
     },
   ],
   history: createWebHistory(),
