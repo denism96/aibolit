@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container contact">
     <h2 class="title">Контакты</h2>
     <div class="content">
       <div class="left-content">
@@ -34,6 +34,10 @@
   </section>
 </template>
 <style lang="scss" scoped>
+.contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 .content {
   display: flex;
   justify-content: space-between;
@@ -48,7 +52,6 @@
 .rigth-content-map {
   width: 950px;
   height: 526px;
-  border: 1px solid red;
 }
 
 .title {

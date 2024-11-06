@@ -3,12 +3,19 @@ import SocialLink from "../social/SocialLink.vue";
 import AppTabs from "../AppTabs.vue";
 import { ref } from "vue";
 import { tabs } from "../../storage/tabs";
+import LoginUser from "../LoginUser.vue";
 
 const selectedTab = ref(tabs[0].name);
 
 const changeTab = (tabName) => {
   selectedTab.value = tabName;
 };
+
+const showModal = ref(false);
+
+function onClickRecordButton() {
+  showModal.value = true;
+}
 </script>
 
 <template>
@@ -19,7 +26,9 @@ const changeTab = (tabName) => {
       <div v-for="tab in tabs" :key="tab.name">
         <h1 v-if="selectedTab === tab.name">{{ tab.label }}</h1>
       </div>
-      <button><router-link to="/record">Записаться</router-link></button>
+      <!-- <button><router-link to="/record">Записаться</router-link></button> -->
+      <button @click="onClickRecordButton">Записаться</button>
+      <LoginUser v-show="showModal"></LoginUser>
       <SocialLink></SocialLink>
     </div>
     <div class="right-content">
