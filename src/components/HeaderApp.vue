@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ModalApp from "./ModalApp.vue";
-let isOpen = ref(false);
-
-function showModal() {
-  isOpen.value = !isOpen.value;
-}
+let isModalOpen = ref(false);
 </script>
 
 <template>
@@ -15,10 +11,18 @@ function showModal() {
     /></router-link>
     <nav>
       <ul class="header-list">
-        <li class="header-list-item" @click="showModal">
-          <!-- <router-link to="/profile">ЛИЧНЫЙ КАБИНЕТ</router-link> -->
+        <li class="header-list-item" @click="isModalOpen = true">
           ЛИЧНЫЙ КАБИНЕТ
         </li>
+        <ModalApp v-model:isOpen="isModalOpen">
+          <h1 class="modal-subtitle">Вход или регистрация</h1>
+          <input
+            class="modal-input"
+            type="tel"
+            placeholder="+7 999 999 99 99"
+          />
+          <button class="modal_btn">Далее</button>
+        </ModalApp>
         <li class="header-list-item about">
           <router-link to="/team" class="hover">О НАС</router-link>
           <div class="about-nav">
@@ -42,11 +46,6 @@ function showModal() {
     </nav>
     <span>Волгоград</span>
   </header>
-  <ModalApp v-if="isOpen" @close="showModal">
-    <h1 class="modal-subtitle">Вход или регистрация</h1>
-    <input class="modal-input" type="tel" placeholder="+7 999 999 99 99" />
-    <button class="modal_btn">Далее</button>
-  </ModalApp>
 </template>
 <style lang="scss" scoped>
 @import "/src/assets/styles/main.scss";
@@ -129,34 +128,5 @@ function showModal() {
   border-radius: 33px;
   color: #fff;
   font-size: 30px;
-}
-.closeModal {
-  position: absolute;
-  right: 10px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  z-index: 3;
-  // outline: 1px solid red;
-  &::before {
-    content: "";
-    position: absolute;
-    right: 20px;
-    top: 5px;
-    width: 1px;
-    height: 20px;
-    border: 1px solid $brown-lite-color;
-    transform: rotate(45deg);
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    right: 20px;
-    top: 5px;
-    width: 1px;
-    height: 20px;
-    border: 1px solid $brown-lite-color;
-    transform: rotate(-45deg);
-  }
 }
 </style>
