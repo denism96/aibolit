@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import ModalApp from "./ModalApp.vue";
+let isOpen = ref(false);
+
+function showModal() {
+  isOpen.value = !isOpen.value;
+}
+</script>
+
 <template>
   <header class="header container">
     <router-link to="/"
@@ -5,8 +15,9 @@
     /></router-link>
     <nav>
       <ul class="header-list">
-        <li class="header-list-item">
-          <router-link to="/profile">ЛИЧНЫЙ КАБИНЕТ</router-link>
+        <li class="header-list-item" @click="showModal">
+          <!-- <router-link to="/profile">ЛИЧНЫЙ КАБИНЕТ</router-link> -->
+          ЛИЧНЫЙ КАБИНЕТ
         </li>
         <li class="header-list-item about">
           <router-link to="/team" class="hover">О НАС</router-link>
@@ -31,6 +42,11 @@
     </nav>
     <span>Волгоград</span>
   </header>
+  <ModalApp v-if="isOpen" @close="showModal">
+    <h1 class="modal-subtitle">Вход или регистрация</h1>
+    <input class="modal-input" type="tel" placeholder="+7 999 999 99 99" />
+    <button class="modal_btn">Далее</button>
+  </ModalApp>
 </template>
 <style lang="scss" scoped>
 @import "/src/assets/styles/main.scss";
@@ -86,6 +102,61 @@
       padding-left: 10px;
       font-weight: bold;
     }
+  }
+}
+
+.modal-subtitle {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  max-width: 187px;
+}
+.modal-input {
+  width: 344px;
+  height: 57px;
+  border: 1px solid $brown-lite-color;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  &::placeholder {
+    padding-left: 20px;
+  }
+}
+.modal_btn {
+  background-color: $brown-lite-color;
+  width: 284px;
+  height: 67px;
+  border-radius: 33px;
+  color: #fff;
+  font-size: 30px;
+}
+.closeModal {
+  position: absolute;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 3;
+  // outline: 1px solid red;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 1px;
+    height: 20px;
+    border: 1px solid $brown-lite-color;
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 1px;
+    height: 20px;
+    border: 1px solid $brown-lite-color;
+    transform: rotate(-45deg);
   }
 }
 </style>
