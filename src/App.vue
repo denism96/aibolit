@@ -1,5 +1,5 @@
 <template>
-  <div class="app-content">
+  <div class="app-content overflow">
     <HeaderApp></HeaderApp>
     <main>
       <router-view></router-view>

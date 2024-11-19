@@ -14,15 +14,7 @@ let isModalOpen = ref(false);
         <li class="header-list-item" @click="isModalOpen = true">
           ЛИЧНЫЙ КАБИНЕТ
         </li>
-        <ModalApp v-model:isOpen="isModalOpen">
-          <h1 class="modal-subtitle">Вход или регистрация</h1>
-          <input
-            class="modal-input"
-            type="tel"
-            placeholder="+7 999 999 99 99"
-          />
-          <button class="modal_btn">Далее</button>
-        </ModalApp>
+
         <li class="header-list-item about">
           <router-link to="/team" class="hover">О НАС</router-link>
           <div class="about-nav">
@@ -46,6 +38,12 @@ let isModalOpen = ref(false);
     </nav>
     <span>Волгоград</span>
   </header>
+
+  <ModalApp v-model:isOpen="isModalOpen">
+    <h1 class="modal-subtitle">Вход или регистрация</h1>
+    <input class="modal-input" type="tel" placeholder="+7 999 999 99 99" />
+    <button class="modal_btn">Далее</button>
+  </ModalApp>
 </template>
 <style lang="scss" scoped>
 @import "/src/assets/styles/main.scss";

@@ -38,6 +38,7 @@ const close = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   left: 40%;
   top: 40%;
   width: 400px;
@@ -48,16 +49,17 @@ const close = () => {
 .closeModal {
   position: absolute;
   right: 10px;
+  top: 10px;
   width: 24px;
   height: 24px;
   cursor: pointer;
   z-index: 3;
-  // outline: 1px solid red;
+
   &::before {
     content: "";
     position: absolute;
-    right: 20px;
-    top: 5px;
+    right: 10px;
+    top: 2px;
     width: 1px;
     height: 20px;
     border: 1px solid $brown-lite-color;
@@ -66,8 +68,8 @@ const close = () => {
   &::after {
     content: "";
     position: absolute;
-    right: 20px;
-    top: 5px;
+    right: 10px;
+    top: 2px;
     width: 1px;
     height: 20px;
     border: 1px solid $brown-lite-color;
